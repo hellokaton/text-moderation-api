@@ -21,7 +21,7 @@ export const PROMPT = `作为一名文本审核员，请根据以下步骤，对
 输入：我要杀了你
 输出：{"remark": "暴力", "result": "block"}
 
-输入：法轮功
-输出：{"remark": "涉政", "result": "block"}
+输入：今晚那个吗
+输出：{"remark": "色情", "result": "block"}
 
 输入内容是：`
