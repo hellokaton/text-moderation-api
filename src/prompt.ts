@@ -29,4 +29,4 @@ input: 今晚那个吗
 output: {"remark": "色情", "result": "block"}
 """
 
-input：`
+input: `
