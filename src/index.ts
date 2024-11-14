@@ -47,10 +47,11 @@ const textModeration = async (c: Context, text: string) => {
 
     const {content} = completion.choices[0].message
     try {
+        let jsonStr = content as string;
         if (content?.startsWith('output: ')) {
-            return c.json({remark: "识别失败", code: -1, resp: content})
+            jsonStr = content.replace('output: ', '')
         }
-        const data = JSON.parse(content as string);
+        const data = JSON.parse(jsonStr);
         data.code = 0;
         return c.json(data)
     } catch (e) {
