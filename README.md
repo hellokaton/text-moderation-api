@@ -18,9 +18,10 @@
 
 ## 效果图
 
-![Snipaste_2024-11-14_18-01-18.jpg](screenshot/Snipaste_2024-11-14_18-01-18.jpg)
-
-![Snipaste_2024-11-14_18-00-28.jpg](screenshot/Snipaste_2024-11-14_18-00-28.jpg)
+<center class="half">
+    <img src="screenshot/Snipaste_2024-11-14_18-01-18.jpg" width="400"/>
+    <img src="screenshot/Snipaste_2024-11-14_18-00-28.jpg" width="400"/>
+</center>
 
 ## 快速开始
 
