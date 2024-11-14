@@ -45,13 +45,16 @@ const textModeration = async (c: Context, text: string) => {
         }
     })
 
-    const result = completion.choices[0].message
+    const {content} = completion.choices[0].message
     try {
-        const data = JSON.parse(result.content as string);
+        if (content?.startsWith('output: ')) {
+            return c.json({remark: "识别失败", code: -1, resp: content})
+        }
+        const data = JSON.parse(content as string);
         data.code = 0;
         return c.json(data)
     } catch (e) {
-        return c.json({remark: "识别失败", code: -1, resp: result})
+        return c.json({remark: "识别失败", code: -1, content})
     }
 }
 
