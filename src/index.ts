@@ -48,7 +48,7 @@ const textModeration = async (c: Context, text: string) => {
         data.code = 0;
         return c.json(data)
     } catch (e) {
-        return c.json({remark: "识别失败", code: -1})
+        return c.json({remark: "识别失败", code: -1, resp: result})
     }
 }
 
