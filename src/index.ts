@@ -39,7 +39,10 @@ const textModeration = async (c: Context, text: string) => {
                 "role": "user",
                 "content": `${PROMPT}"${text}"`
             }
-        ]
+        ],
+        response_format: {
+            "type": "json_object"
+        }
     })
 
     const result = completion.choices[0].message
