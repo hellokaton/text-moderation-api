@@ -9,19 +9,24 @@ export const PROMPT = `作为一名文本审核员，请根据以下步骤，对
   - 威胁：包含威胁性言辞，意图伤害他人。
   - 恐怖：涉及恐怖主义或极端主义，枪支枪械。
   - 涉政：涉及敏感政治话题或违法内容，任何涉及中国和其他国家主要领导人、党派、政府机构，中国历史上的敏感事件，有关中国的反动分裂内容。
-4. 最终结论：总结判断结果，回复使用JSON格式，不需要回复其他内容，格式为 {"remark": "正常", "result": "pass"}。
+4. 最终结论：总结判断结果，回复使用JSON Object格式，不回复其他任何文本，JSON格式为 {"remark": "正常", "result": "pass"}
 
 如果文本中包含任何一种或多种不良内容，在remark字段中说明；如果没有不良内容，result字段为pass。
 
 以下为输入输出示例：
 
-输入：今天天气不错
-输出：{"remark": "正常", "result": "pass"}
+"""
+input: 敲里吗
+output: {"remark": "辱骂", "result": "block"}
 
-输入：我要杀了你
-输出：{"remark": "暴力", "result": "block"}
+input: 今天天气不错
+output: {"remark": "正常", "result": "pass"}
 
-输入：今晚那个吗
-输出：{"remark": "色情", "result": "block"}
+input: 我要杀了你
+output: {"remark": "暴力", "result": "block"}
+
+input: 今晚那个吗
+output: {"remark": "色情", "result": "block"}
+"""
 
 输入内容是：`
