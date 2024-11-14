@@ -5,7 +5,9 @@ compatibility_date = "2024-11-14"
 # compatibility_flags = [ "nodejs_compat" ]
 
 [vars]
-OPENROUTER_API_KEY = "your-api-key"
+OPENAI_BASE_URL = "https://openrouter.ai/api/v1"
+OPENAI_API_KEY = "sk-xxxxxxxxxxxxxxx"
+OPENAI_MODEL = "qwen/qwen-2-7b-instruct:free"
 
 [observability]
 enabled = true

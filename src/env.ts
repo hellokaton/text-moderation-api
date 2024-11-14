@@ -1,5 +1,7 @@
 export type Bindings = {
-    OPENROUTER_API_KEY: string;
+    OPENAI_BASE_URL: string;
+    OPENAI_API_KEY: string;
+    OPENAI_MODEL: string;
     RATE_LIMITER: RateLimit;
 }
 

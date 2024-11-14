@@ -40,6 +40,12 @@ pnpm install
 cp wrangler.toml.example wrangler.toml 
 ```
 
+可以修改以下配置：
+
+- `OPENAI_BASE_URL`：API 服务的基础 URL。
+- `OPENAI_API_KEY`：OpenAI API 密钥。
+- `OPENAI_MODEL`：OpenAI 模型名称。
+
 ### 启动服务
 
 运行以下命令启动 API 服务：

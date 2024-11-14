@@ -29,11 +29,11 @@ const textModeration = async (c: Context, text: string) => {
         return c.json({code: 400, msg: 'text长度不能超过200'})
     }
     const openai = new OpenAI({
-        baseURL: "https://openrouter.ai/api/v1",
-        apiKey: c.env.OPENROUTER_API_KEY,
+        baseURL: c.env.OPENAI_BASE_URL,
+        apiKey: c.env.OPENAI_API_KEY,
     })
     const completion = await openai.chat.completions.create({
-        model: "qwen/qwen-2-7b-instruct:free",
+        model: c.env.OPENAI_MODEL,
         messages: [
             {
                 "role": "user",
